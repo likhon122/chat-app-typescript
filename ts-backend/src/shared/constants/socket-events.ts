@@ -1,0 +1,31 @@
+/**
+ * Socket Event Constants
+ */
+export const SOCKET_EVENTS = {
+  // Connection
+  CONNECTION: 'connection',
+  DISCONNECT: 'disconnect',
+
+  // Messaging
+  NEW_MESSAGE: 'NEW_MESSAGE',
+  NEW_MESSAGE_ALERT: 'NEW_MESSAGE_ALERT',
+  REFETCH_CHATS: 'REFETCH_CHATS',
+
+  // Typing
+  START_TYPING: 'START_TYPING',
+  STOP_TYPING: 'STOP_TYPING',
+
+  // Calling
+  CALL_USER: 'CALL_USER',
+  INCOMING_CALL: 'INCOMING_CALL',
+  ANSWER_CALL: 'ANSWER_CALL',
+  CALL_ANSWERED: 'CALL_ANSWERED',
+  REJECT_CALL: 'REJECT_CALL',
+  CALL_REJECTED: 'CALL_REJECTED',
+  USER_OFFLINE: 'USER_OFFLINE',
+
+  // WebRTC
+  ICE_CANDIDATE: 'ICE_CANDIDATE',
+} as const;
+
+export type SocketEventType = (typeof SOCKET_EVENTS)[keyof typeof SOCKET_EVENTS];

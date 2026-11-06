@@ -1,0 +1,6 @@
+{
+  "tscAlias": {
+    "resolveFullPaths": true,
+    "verbose": false
+  }
+}
